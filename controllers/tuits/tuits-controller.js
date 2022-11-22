@@ -26,6 +26,12 @@ const createTuit = (req, res) => {
     // initialize handle
     newTuit.handle = "nasa";
     
+    // initialize time
+    newTuit.time = "2h";
+    
+    //initialize topic
+    newTuit.topic = "Space";
+    
     // initialize default image
     newTuit.image = "nasa.png";
 
