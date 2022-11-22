@@ -19,12 +19,28 @@ const createTuit = (req, res) => {
 
     // add _id field as a time stamp
     newTuit._id = (new Date()).getTime()+'';
+    
+    // initialize username
+    newTuit.userName = "Nasa";
+    
+    // initialize handle
+    newTuit.handle = "nasa";
+    
+    // initialize default image
+    newTuit.image = "nasa.png";
 
     // initialize likes counter
     newTuit.likes = 0;
 
     // initialize liked flag
     newTuit.liked = false;
+    
+    // initialize replies counter
+    newTuit.replies = 0;
+    
+    // initialize retuits counter
+    newTuit.retuits = 0;
+    
 
     // append new tuit to tuits array
     tuits.push(newTuit);
