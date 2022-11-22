@@ -33,8 +33,8 @@ const createTuit = (req, res) => {
     newTuit.topic = "Space";
     
     // initialize default image
-//     newTuit.image = "nasa.png"; 
-    newTuit.image = "https://drive.google.com/file/d/1QgK_2QlKK750XvovSjsW04j7cP1zpkJj/view?usp=sharing";
+    newTuit.image = "nasa.png"; 
+//     newTuit.image = "https://drive.google.com/file/d/1QgK_2QlKK750XvovSjsW04j7cP1zpkJj/view?usp=sharing";
 
     // initialize likes counter
     newTuit.likes = 0;
