@@ -12,6 +12,18 @@ import UserController from "./controllers/users/users-controller.js";
 import TuitsController
     from "./controllers/tuits/tuits-controller.js";
 
+
+// load the mongoose library
+import mongoose from "mongoose";
+
+// connect to the tuiter
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
+    || 'mongodb://127.0.0.1:27017/tuiter';
+mongoose.connect(CONNECTION_STRING);
+// mongoose.connect('mongodb://127.0.0.1:27017/tuiter');
+// mongoose.connect('mongodb://localhost:27017/tuiter');
+
+
 // const express = require('express')
 const app = express();
 
@@ -23,7 +35,7 @@ app.use(express.json());
 
 //NOTE: Express defines a JSON middleware to parse data from the body that can be registered as a middleware.
 // All requests will first go through this middleware parsing the HTTP body into a JSON object added to the request
-// object in a new body property that later HTTP handlers can access.
+// object in a new body property that later HTTP hmandlers can access.
 
 
 // Instead of defining the http endpoints here, define them in the hello-controller.js file
