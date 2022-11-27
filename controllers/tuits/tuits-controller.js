@@ -53,7 +53,6 @@ const createTuit = async  (req, res) => {  // now it's an asynchronous function
     // initialize retuits counter
     newTuit.retuits = 0;
 
-
     // append new tuit to tuits array
     // tuits.push(newTuit); // not using array anymore
 
@@ -61,11 +60,9 @@ const createTuit = async  (req, res) => {  // now it's an asynchronous function
     // with DAO's createTuit
     const insertedTuit = await tuitsDao.createTuit(newTuit);
 
-
     // respond with actual inserted tuit
     res.json(insertedTuit);
 
-    // next chapter will store in database instead
 }
 
 const findTuits = async (req, res) => { // now it's asynchronous function
